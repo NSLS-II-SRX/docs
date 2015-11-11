@@ -9,10 +9,9 @@ Welcome to The CSX Beamline at NSLS-II Documentation!
 Contents:
 
 .. toctree::
-   :glob:
    :maxdepth: 4
 
-   csx-1/endstation/*
+   csx-1/index.rst
 
 Downloads
 =========
