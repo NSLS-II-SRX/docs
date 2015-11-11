@@ -4,14 +4,14 @@ Fast CCD Detector
 Specifications
 --------------
 
-*   Pixel Size: 30 |micron| x 30 |micron|
+*   Pixel Size: 30 |micron| m x 30 |micron|
 *   Active Area: 960 pixels x 960 pixels
 *   The center, black stripe is artificial (over scan function)
 *   192 independent outputs (480 rows x 10 columns)
 *   10 columns = super-column
 *   Frame Store Mode
 *   Pixel readout time: 500 us
-*   Digitization time: 2 us at 120 Hz
+*   Digitization time: 2 |micron| s at 120 Hz
 *   100 Hz maximum data collection
 
 .. |micron| unicode:: 0x00B5
