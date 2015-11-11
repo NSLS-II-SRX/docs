@@ -3,15 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to NSLS-II CSX Beamline Docs's documentation!
+Welcome to The CSX Beamline at NSLS-II Documentation!
 =====================================================
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :glob:
+   :maxdepth: 4
 
+   csx-1/endstation/*
 
+Downloads
+=========
+`Download the CSX Documentation as a PDF <pdf-download/NSLS-IICSXBeamlineDocs.pdf>`_
 
 Indices and tables
 ==================
