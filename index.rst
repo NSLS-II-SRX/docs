@@ -5,8 +5,9 @@ Contents:
 
 .. toctree::
    :maxdepth: 4
-
-   csx-1/index.rst
+   
+   csx/help
+   csx-1/index
 
 Downloads
 =========
