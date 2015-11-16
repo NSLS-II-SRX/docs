@@ -101,15 +101,15 @@ used to correct for dark current and gain:
     
     import numpy as np
 
-    def subtract_background(image, dark_image, gains = [1, 4, 8]):
+    def subtract_background(image, dark_image, gain = [1, 4, 8]):
         gain_mask_8 = (image & 0xC000) == 0xC000
         gain_mask_4 = (image & 0xC000) == 0x8000
         gain_mask_1 = (image & 0xC000) == 0x0000
 
         cor_image = image.astype(np.float16)
-        cor_imagei -= gain_mask_8 * dark_image[2]
-        cor_imagei -= gain_mask_4 * dark_image[1]
-        cor_imagei -= gain_mask_1 * dark_image[0]
+        cor_image -= gain_mask_8 * dark_image[2]
+        cor_image -= gain_mask_4 * dark_image[1]
+        cor_image -= gain_mask_1 * dark_image[0]
 
         gain_image = (gain_mask_8 * gain[2]) + (gain_mask_4 * gain[1]) + (gain_mask_1 * gain[0])
 
