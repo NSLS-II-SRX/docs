@@ -86,14 +86,42 @@ where :math:`A_{\mathrm{corr}}` is the corrected intensity,
 :math:`A_{\mathrm{meas}}` is the measured value by the ADC, :math:`G` is the
 gain of the ADC and :math:`O` is the bias offset. 
 
-Due to the multi gain nature 
+Dark Image Subtraction
+----------------------
+
+Due to the multi gain nature of the fCRIC it is therefore necessary to take 3
+dark images at different gain settings to obtain the different ADC offsets
+under these modes. As the lower gain settings are not subject to
+considerable contribution due to dark current it is usually justifiable to
+measure only the highest gain dark image repeatedly. Given 3 dark images for
+the different gain settings the images the following python pseudo code can be
+used to correct for dark current and gain:
+
+.. code:: python
+    
+    import numpy as np
+
+    def subtract_background(image, dark_image, gains = [1, 4, 8]):
+        gain_mask_8 = (image & 0xC000) == 0xC000
+        gain_mask_4 = (image & 0xC000) == 0x8000
+        gain_mask_1 = (image & 0xC000) == 0x0000
+
+        cor_image = image.astype(np.float16)
+        cor_imagei -= gain_mask_8 * dark_image[2]
+        cor_imagei -= gain_mask_4 * dark_image[1]
+        cor_imagei -= gain_mask_1 * dark_image[0]
+
+        gain_image = (gain_mask_8 * gain[2]) + (gain_mask_4 * gain[1]) + (gain_mask_1 * gain[0])
+
+        return (cor_image * gain_image), gain_image
+
 
 Useful Links
 ------------
 
 * `LBNL Fast CCD Site <https://sites.google.com/a/lbl.gov/fast-ccd-camera-systems>`_ 
 * `csxtools python analysis routines <https://github.com/NSLS-II-CSX/csxtools>`_
-* `libcin low level c driver <https://sites.google.com/a/lbl.gov/fast-ccd-camera-systems>`_ 
+* `libcin low level c driver <https://github.com/NSLS-II-CSX/libcin>`_
 * `areaDetector Driver <https://github.com/areaDetector/ADFastCCD>`_
 
 .. |mu| unicode:: 0x00B5
