@@ -8,6 +8,7 @@ Contents:
    
    csx-1/index
    csx/help
+   guides/controls_account
 
 Downloads
 =========
