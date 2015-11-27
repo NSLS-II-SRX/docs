@@ -1,5 +1,5 @@
-UNIX Account Setup
-==================
+UNIX Primer and Account Setup
+=============================
 
 File Permissions
 ----------------
@@ -7,7 +7,7 @@ File Permissions
 In a unix system every file (and directory) has an owner, an associated
 group, and a set of permission flags that specify separate read, write,
 and execute permissions for the *user* (owner), *group*, and *other*.
-*Other* is also sometimes known as *world* permissions, and applies to
+*other* is also sometimes known as *world* permissions, and applies to
 all users who can login to the system. 
 
 The permission flags can be seen by the ``ls -l`` command::
@@ -29,6 +29,10 @@ restrict listing to only the user and members of the csx group.
 
 To set file permissions, UNIX uses the *octal* representation of file
 permissions, with 4 digits representing the special, user, group and other.
+These permissions are outlined in the table :ref:`octal file permissions
+<octal-table>`
+
+.. _octal-table:
 
 .. table:: Octal file permissions for ``chmod`` and ``umask``
 
@@ -64,10 +68,10 @@ the ``-R`` option. For example: ::
 
 UNIX uses the **umask** to define how (new or default) files permissions are
 set. This can be set on a per-user basis using the ``umask`` command to set the
-default (allowed) permissions. The ``umask`` command uses the `octal
-representation`_ the same as ``chmod`` to define permissions and should have
-the *restricted* permissions set - i.e. the inverse of what you want the files
-to be. 
+default (allowed) permissions. The ``umask`` command uses the :ref:`octal
+representation <octal-table>` the same as ``chmod`` to define permissions and
+should have the *restricted* permissions set - i.e. the inverse of what you
+want the files to be. 
 
 .. code-block:: bash
 
@@ -98,7 +102,7 @@ The following example illustrates the use of the ``umask`` command: ::
     -rw-rw---- 1 swilkins csx 0 Nov 24 06:55 hello_world
     -rw-r--r-- 1 swilkins csx 0 Nov 24 06:58 hello_world_again
 
-To set the umask for every session the command should be added to your
+To set the *umask* for every session the command should be added to your
 ``.bashrc`` file. CSX Team members should add the following to their ``.bashrc``:
 
 .. code-block:: bash

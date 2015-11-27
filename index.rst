@@ -7,7 +7,6 @@ Contents:
    :maxdepth: 4
    
    csx-1/index
-   csx/help
    guides/help
    guides/account_setup
    guides/conda_env
