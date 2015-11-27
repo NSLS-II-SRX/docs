@@ -8,7 +8,10 @@ Contents:
    
    csx-1/index
    csx/help
-   guides/controls_account
+   guides/help
+   guides/account_setup
+   guides/conda_env
+   guides/unix
 
 Downloads
 =========
