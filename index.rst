@@ -6,12 +6,10 @@ These pages are the doccumentation of the CSX beamlines (`23-ID-1
 <https://www.bnl.gov/ps/beamlines/beamline.php?b=CSX-2>`_) at the `NSLS-II
 <http://www.bnl.gov/ps>`_.
 
-.. figure:: images/csx.jpgt the `NSLS-II <http://www.bnl.gov/ps>`_.
-
 .. figure:: images/csx.jpg
    :alt: CSX Beamline at NSLS-II
 
-   LBNL fCRIC Circuit Diagram
+   CSX Beamlines control area at the NSLS-II
 
 Contents:
 
