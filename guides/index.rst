@@ -10,7 +10,8 @@ Contents:
    account_setup
    conda_env
    unix
-   vim_cheat_sheet
+   vim-cheatsheet
+   tmux-cheatsheet
 
 Indices and tables
 ==================

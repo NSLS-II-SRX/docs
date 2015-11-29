@@ -76,16 +76,16 @@ Panes (splits)
     %  vertical split
     "  horizontal split
 
-    o  swap panes
-    q  show pane numbers
-    x  kill pane
-    +  break pane into window (e.g. to select text by mouse to copy)
-    -  restore pane from window
-    ⍽  space - toggle between layouts
-    <prefix> q (Show pane numbers, when the numbers show up type the key to goto that pane)
-    <prefix> { (Move the current pane left)
-    <prefix> } (Move the current pane right)
-    <prefix> z toggle pane zoom
+    o        swap panes
+    q        show pane numbers
+    x        kill pane
+    +        break pane into window (e.g. to select text by mouse to copy)
+    -        restore pane from window
+    <space>  toggle between layouts
+    q        (Show pane numbers, when the numbers show up type the key to goto that pane)
+    {        (Move the current pane left)
+    }        (Move the current pane right)
+    z        toggle pane zoom
 
 Sync Panes
 ----------
@@ -100,15 +100,15 @@ command line, and typing:
 
 You can optionally add on or off to specify which state you want;
 otherwise the option is simply toggled. This option is specific to one
-window, so it won’t change the way your other sessions or windows
-operate. When you’re done, toggle it off again by repeating the command.
+window, so it won't change the way your other sessions or windows
+operate. When you're done, toggle it off again by repeating the command.
 `tip source <http://blog.sanctum.geek.nz/sync-tmux-panes/>`_
 
 Resizing Panes
 --------------
 
-You can also resize panes if you don’t like the layout defaults. I
-personally rarely need to do this, though it’s handy to know how. Here
+You can also resize panes if you don't like the layout defaults. I
+personally rarely need to do this, though it's handy to know how. Here
 is the basic syntax to resize panes:
 
 ::
@@ -142,7 +142,7 @@ With this option set, we can use h, j, k, and l to move around our
 buffer.
 
 To get out of Copy mode, we just press the ENTER key. Moving around one
-character at a time isn’t very efficient. Since we enabled vi mode, we
+character at a time isn't very efficient. Since we enabled vi mode, we
 can also use some other visible shortcuts to move around the buffer.
 
 For example, we can use "w" to jump to the next word and "b" to jump
