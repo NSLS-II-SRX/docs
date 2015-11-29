@@ -11,6 +11,7 @@ Contents:
    guides/account_setup
    guides/conda_env
    guides/unix
+   guides/vim_cheat_sheet
 
 Downloads
 =========
