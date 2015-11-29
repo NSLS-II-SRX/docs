@@ -4,14 +4,10 @@ Welcome to The CSX Beamline at NSLS-II Documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    
    csx-1/index
-   guides/help
-   guides/account_setup
-   guides/conda_env
-   guides/unix
-   guides/vim_cheat_sheet
+   guides/index
 
 Downloads
 =========
