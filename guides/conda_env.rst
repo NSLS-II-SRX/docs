@@ -1,28 +1,62 @@
 Installing a Personal Conda Environment
 =======================================
 
+Introduction
+------------
+
+This guide covers installing the conda packaging system *miniconda* into your
+own space. This has a number of advantages, including full controll on package
+versions. Due to the large nature of the files, it is suggested not to install
+into your home directory if you are using NFS home directories. At CSX conda
+should be installed on the GPFS file system in the directory
+``/GPFS/xf23id/users/<uid>`` where ``<uid>`` is your user ID. 
+
+To create a directory on the **GPFS** system, do the following::
+
+   [swilkins@23id1-srv2 ~]$ sudo mkdir /GPFS/xf23id/users/<uid>
+   [swilkins@23id1-srv2 ~]$ sudo chown <uid> /GPFS/xf23id/users/<uid>
+   [swilkins@23id1-srv2 ~]$ sudo chmod 750 /GPFS/xf23id/users/<uid>
+
+Where ``<uid>`` is your userid.
+
 Installing Miniconda
 --------------------
 
 Install the latest *miniconda*. This can be done by downloading the latest
 miniconda binary installer from `conda.pydata.org`_.
 
-Once the file is downloaded make the file executable and run the installer and
-answering all the default questions. However **DO NOT** let the installer change your ``.bashrc`` file.::
+Once the file is downloaded make the file executable and run the installer.
+**DO NOT** let the installer change your ``.bashrc`` file.::
 
     [swilkins@xf23id1-srv2 ~/Downloads]$ chmod u+x Miniconda3-latest-Linux-x86_64.sh
     [swilkins@xf23id1-srv2 ~/Downloads]$ ./Miniconda3-latest-Linux-x86_64.sh
 
+When prompted, enter the GPFS path for the install location, for example: ::
+
+    Do you approve the license terms? [yes|no]
+    [no] >>> yes
+    
+    Miniconda3 will now be installed into this location:
+    /home/swilkins/miniconda3
+    
+      - Press ENTER to confirm the location
+      - Press CTRL-C to abort the installation
+      - Or specify a different location below
+    
+    [/home/swilkins/miniconda3] >>> /GPFS/xf23id/users/swilkins/miniconda3
+    PREFIX=/GPFS/xf23id/users/swilkins/miniconda3
+    
 To add the *miniconda* to yor path, edit your ``.bashrc`` file with your
 favorite editor and add the following lines.
 
 .. code-block:: bash
    
-    if [ -e "$HOME/miniconda3" ]; then
-        export PATH="$HOME/miniconda3/bin:$PATH"
+    if [ -e "/GPFS/xf23id/users/swilkins/miniconda3" ]; then
+        export PATH="/GPFS/xf23id/users/swilkins/miniconda3/bin:$PATH"
     fi
 
-To enable the path, now source your ``.bashrc`` file::
+Substituting ``swilkins`` for your user ID. To enable the path, now source your
+``.bashrc`` file::
 
     [swilkins@xf23id1-srv2 ~/Downloads]$ source ~/.bashrc
 
