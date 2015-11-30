@@ -9,6 +9,7 @@ Contents:
    help
    account_setup
    conda_env
+   linuxbrew
    unix
    vim-cheatsheet
    tmux-cheatsheet
