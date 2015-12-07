@@ -21,6 +21,7 @@ Contents
    
    csx-1/index
    guides/index
+   csxtools/index
 
 Downloads
 ---------

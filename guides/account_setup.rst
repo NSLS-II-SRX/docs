@@ -65,7 +65,8 @@ The entire key generation process looks like this: ::
     |           . o   |
     |                 |
     +-----------------+
-    The public key is now located in /home/demo/.ssh/id_rsa.pub The private key (identification) is now located in /home/demo/.ssh/id_rsa
+    The public key is now located in /home/demo/.ssh/id_rsa.pub The private key
+    (identification) is now located in /home/demo/.ssh/id_rsa
 
 Copy the Public Key
 ^^^^^^^^^^^^^^^^^^^

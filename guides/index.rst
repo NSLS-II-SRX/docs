@@ -11,6 +11,7 @@ Contents:
    conda_env
    linuxbrew
    unix
+   markdown-cheatsheet
    vim-cheatsheet
    tmux-cheatsheet
 
