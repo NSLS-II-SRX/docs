@@ -37,6 +37,9 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'sphinx.ext.napoleon',
+    'IPython.sphinxext.ipython_directive',
+    'IPython.sphinxext.ipython_console_highlighting',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -53,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'NSLS-II CSX Beamline Docs'
-copyright = u'2015, Stuart B. Wilkins'
+copyright = u'2015, Brookhaven Science Associates, Brookhaven National Lab.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -113,7 +116,10 @@ html_theme = 'bootstrap'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {'source_link_position': "footer",
+                      'navbar_sidebarrel': False,
+                      'bootstrap_version': "3",
+                      'bootswatch_theme' : "united"}
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
@@ -210,7 +216,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'NSLS-IICSXBeamlineDocs.tex', u'NSLS-II CSX Beamline Docs Documentation',
-   u'Stuart B. Wilkins', 'manual'),
+   u'Brookhaven Science Associates, Brookhaven National Lab', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -240,7 +246,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'nsls-iicsxbeamlinedocs', u'NSLS-II CSX Beamline Docs Documentation',
-     [u'Stuart B. Wilkins'], 1)
+     [u'Brookhaven Science Associates, Brookhaven National Lab'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -254,7 +260,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'NSLS-IICSXBeamlineDocs', u'NSLS-II CSX Beamline Docs Documentation',
-   u'Stuart B. Wilkins', 'NSLS-IICSXBeamlineDocs', 'One line description of project.',
+   u'Brookhaven Science Associates, Brookhaven National Lab', 'NSLS-IICSXBeamlineDocs', 'One line description of project.',
    'Miscellaneous'),
 ]
 

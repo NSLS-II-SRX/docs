@@ -1,18 +1,12 @@
 CSX-1 (23-ID-1) Beamline Doccumentation
 =======================================
 
-Contents:
+Contents
+--------
 
 .. toctree::
    :glob:
    :maxdepth: 4
 
    endstation/*
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
