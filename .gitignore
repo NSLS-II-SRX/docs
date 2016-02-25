@@ -1,3 +1,5 @@
+# Custom additions
+*.swp
 # Files for sphynx build
 _build
 
@@ -58,3 +60,4 @@ docs/_build/
 
 # PyBuilder
 target/
+
