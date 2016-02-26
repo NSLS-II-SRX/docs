@@ -1,5 +1,5 @@
 language: python
-sudo: required
+sudo: false
 python:
 - '2.7'
 before_install:
@@ -11,12 +11,8 @@ before_install:
 - chmod +x miniconda.sh
 - "./miniconda.sh -b -p /home/travis/mc"
 - export PATH=/home/travis/mc/bin:$PATH
-- sudo apt-get update
-- sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng
-  #- mkdir -p /home/travis/.config/metadatastore
-  #- 'echo "port: 27017" > /home/travis/.config/metadatastore/connection.yml'
-  #- mkdir -p /home/travis/.config/filestore
-  #- 'echo "port: 27017" > /home/travis/.config/filestore/connection.yml'
+  #- sudo apt-get update
+  #- sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng
 install:
 - export GIT_FULL_HASH=`git rev-parse HEAD`
 - conda config --set always_yes true
@@ -33,22 +29,12 @@ install:
   coverage jsonschema jinja2 sphinx pyyaml ipywidgets prettytable boltons
   pims=0.3.3 sphinx-bootstrap-theme pandoc
 - source activate testenv
-  #- ln -s /home/travis/mc/envs/testenv/lib/libgmp.so.10 /home/travis/mc/envs/testenv/lib/libgmp.so.3
-  #- pip install coveralls
-  #- pip install codecov
-  #- pip install pytest-pep8
-  #- python setup.py install build_ext -i
 
 script:
-        #- py.test --pep8 -m pep8
-        #- coverage run --source=csxtools run_tests.py
 - cd $TRAVIS_BUILD_DIR && make html 
-#- cd $TRAVIS_BUILD_DIR && conda build conda-recipe
-after_success:
-        #- cd $TRAVIS_BUILD_DIR && coveralls
-        #- cd $TRAVIS_BUILD_DIR && codecov
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
   cd $TRAVIS_BUILD_DIR && make github GIT_MF=1; fi;
+after_success:
 env:
   global:
   - GH_USER=waynelewis
