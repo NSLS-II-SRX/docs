@@ -1,5 +1,5 @@
 language: python
-sudo: false
+#sudo: false
 python:
 - '2.7'
 before_install:
@@ -11,6 +11,8 @@ before_install:
 - chmod +x miniconda.sh
 - "./miniconda.sh -b -p /home/travis/mc"
 - export PATH=/home/travis/mc/bin:$PATH
+- sudo apt-get update
+- sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng
   #- mkdir -p /home/travis/.config/metadatastore
   #- 'echo "port: 27017" > /home/travis/.config/metadatastore/connection.yml'
   #- mkdir -p /home/travis/.config/filestore
@@ -36,6 +38,7 @@ install:
   #- pip install codecov
   #- pip install pytest-pep8
   #- python setup.py install build_ext -i
+
 script:
         #- py.test --pep8 -m pep8
         #- coverage run --source=csxtools run_tests.py
