@@ -16,9 +16,9 @@ else
 	GH_DIR := $(shell mktemp -d)
 endif
 ifeq ($(GIT_MF), 1)
-	GH_URL = git@github.com:NSLS-II/NSLS-II.github.io.git
+	GH_URL = git@github.com:NSLS-II-SRX/NSLS-II-SRX.github.io.git
 else
-	GH_URL = https://github.com/NSLS-II/NSLS-II.github.io.git
+	GH_URL = https://github.com/NSLS-II-SRX/NSLS-II-SRX.github.io.git
 endif
 
 # User-friendly check for sphinx-build
@@ -99,17 +99,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/NSLS-IIStandards.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/NSLS-IISRXDocumentation.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/NSLS-IIStandards.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/NSLS-IISRXDocumentation.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/NSLS-IIStandards"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/NSLS-IIStandards"
+	#@echo "# mkdir -p $$HOME/.local/share/devhelp/NSLS-IIStandards"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/NSLS-IISRXDocumentation"
 	@echo "# devhelp"
 
 epub:
