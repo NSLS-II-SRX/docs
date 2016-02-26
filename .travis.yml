@@ -20,8 +20,8 @@ install:
 - conda config --add channels asmeurer
 - conda update conda
 - conda install conda-build
-- conda create -n testenv pip python=$TRAVIS_PYTHON_VERSION six "numpy<1.10" coverage
-  jsonschema jinja2 sphinx pyyaml ipywidgets prettytable boltons pims=0.3.3 sphinx-bootstrap-theme
+- conda create -n testenv pip python=$TRAVIS_PYTHON_VERSION 
+  jsonschema jinja2 sphinx pyyaml prettytable boltons sphinx-bootstrap-theme
   pandoc
 - source activate testenv
 script:
