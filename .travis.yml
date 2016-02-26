@@ -2,6 +2,13 @@ language: python
 sudo: false
 python:
 - '2.7'
+addons:
+        apt:
+                packages:
+                        texlive-latex-base
+                        texlive-fonts-recommended
+                        texlive-fonts-extra
+                        texlive-latex-extra
 before_install:
 - git config --global user.email "donotreply@travis.ci"
 - git config --global user.name "travisci"
