@@ -13,13 +13,16 @@ High-flux
 Mir:2 - High-flux VFM
 ~~~~~~~~
 
+
 Mechanics
 ^^^^^^^^^
 
 * Weak link flexures for all translations
 * Vertical translation system has four stepper motors, so is
-overconstrained. Extra axis is twist, and needs to be maintained at
-zero. 
+  overconstrained. Extra axis is twist, and needs to be maintained at
+  zero. 
+
+
 
 Motion control 
 ^^^^^^^^^^^^^^
