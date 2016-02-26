@@ -1,2 +1,2 @@
 # standards
-Standards Documentation for NSLS-II DAQ and Analysis
+Documentation for SRX Beamline
