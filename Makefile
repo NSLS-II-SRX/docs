@@ -193,8 +193,8 @@ pseudoxml:
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
-#github: html latexpdf
-github: html 
+github: html latexpdf
+#github: html
 	@echo "Working Directory $(GH_DIR)"
 	git clone $(GH_URL) $(GH_DIR)
 	cp -rv _build/html/* $(GH_DIR)
