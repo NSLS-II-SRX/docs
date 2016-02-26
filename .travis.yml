@@ -20,7 +20,7 @@ install:
 - conda config --add channels asmeurer
 - conda update conda
 - conda install conda-build
-- conda create -n testenv pip python=$TRAVIS_PYTHON_VERSION 
+- conda create -n testenv pip python=$TRAVIS_PYTHON_VERSION six
   jsonschema jinja2 sphinx pyyaml prettytable boltons sphinx-bootstrap-theme
   pandoc
 - source activate testenv
