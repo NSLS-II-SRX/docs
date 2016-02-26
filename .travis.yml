@@ -27,7 +27,7 @@ install:
 script:
 - cd $TRAVIS_BUILD_DIR && make html
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
-  cd $TRAVIS_BUILD_DIR && make github GIT_MF=1; fi;
+  cd $TRAVIS_BUILD_DIR && make github; fi;
 after_success:
 env:
   global:
