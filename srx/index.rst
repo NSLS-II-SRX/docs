@@ -1,5 +1,5 @@
-CSX-1 (23-ID-1) Beamline Doccumentation
-=======================================
+SRX (5-ID-1) Beamline Documentation
+===================================
 
 Contents
 --------
