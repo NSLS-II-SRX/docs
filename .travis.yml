@@ -10,6 +10,7 @@ addons:
                         - texlive-fonts-extra
                         - texlive-latex-extra
                         - texlive-latex-recommended
+                        - ptex-jtex
 before_install:
 - git config --global user.email "donotreply@travis.ci"
 - git config --global user.name "travisci"
