@@ -5,7 +5,11 @@ python:
 addons:
         apt:
                 packages:
-                        - texlive-full
+                        - texlive-latex-base
+                        - texlive-fonts-recommended
+                        - texlive-fonts-extra
+                        - texlive-latex-extra
+                        - texlive-latex-recommended
 before_install:
 - git config --global user.email "donotreply@travis.ci"
 - git config --global user.name "travisci"
