@@ -29,7 +29,7 @@ install:
 - conda update conda
 - conda install conda-build
 - conda create -n testenv pip python=$TRAVIS_PYTHON_VERSION ipywidgets 
-  jsonschema sphinx pyyaml prettytable boltons sphinx-bootstrap-theme pandoc
+  jsonschema sphinx pyyaml boltons sphinx-bootstrap-theme pandoc
 - source activate testenv
 script:
 - cd $TRAVIS_BUILD_DIR && make html
