@@ -23,13 +23,13 @@ install:
 - export GIT_FULL_HASH=`git rev-parse HEAD`
 - conda config --set always_yes true
 - conda config --set show_channel_urls true
-- conda config --add channels lightsource2
+  #- conda config --add channels lightsource2
 - conda config --add channels bokeh
 - conda config --add channels asmeurer
 - conda update conda
 - conda install conda-build
-- conda create -n testenv pip python=$TRAVIS_PYTHON_VERSION ipywidgets "numpy<1.10"
-  jsonschema jinja2 sphinx pyyaml prettytable boltons sphinx-bootstrap-theme pandoc
+- conda create -n testenv pip python=$TRAVIS_PYTHON_VERSION ipywidgets 
+  jsonschema sphinx pyyaml prettytable boltons sphinx-bootstrap-theme pandoc
 - source activate testenv
 script:
 - cd $TRAVIS_BUILD_DIR && make html
