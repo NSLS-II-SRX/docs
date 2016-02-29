@@ -3,13 +3,13 @@ sudo: false
 python:
 - '2.7'
 addons:
-        apt:
-                packages:
-                        - texlive-latex-base
-                        - texlive-fonts-recommended
-                        - texlive-fonts-extra
-                        - texlive-latex-extra
-                        - texlive-latex-recommended
+  apt:
+    packages:
+    - texlive-latex-base
+    - texlive-fonts-recommended
+    - texlive-fonts-extra
+    - texlive-latex-extra
+    - texlive-latex-recommended
 before_install:
 - git config --global user.email "donotreply@travis.ci"
 - git config --global user.name "travisci"
@@ -29,15 +29,14 @@ install:
 - conda update conda
 - conda install conda-build
 - conda create -n testenv pip python=$TRAVIS_PYTHON_VERSION ipywidgets "numpy<1.10"
-  jsonschema jinja2 sphinx pyyaml prettytable boltons sphinx-bootstrap-theme
-  pandoc
+  jsonschema jinja2 sphinx pyyaml prettytable boltons sphinx-bootstrap-theme pandoc
 - source activate testenv
 script:
 - cd $TRAVIS_BUILD_DIR && make html
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
   cd $TRAVIS_BUILD_DIR && make github; fi;
-after_success:
+after_success: 
 env:
   global:
-  - GH_USER=waynelewis
   - secure: vjBaIbDvZDNZxxzLnI/zDM6KT4IUA9uhhe/C2wYU8d09FW4yuIYpTJqwCyRCuuYvXBGej9LP9ZG/0+qO+4T4QfDCVpQKymBcaPY0ccX0MuNcWZTrCpYOGdykwhg8L/2bTu4ovrW/BaF2Ppy6MSDKZeavKlNqzxd4PGZc9lHBxa6gcLvIw00CqIJP3lO3fZCCEUssTIPzYjNHKQ47Ip/Lw3e66ptM2Mxg1jP/6px5zUMxnNWkiNyU6Fi+Ohl+w59Ey5EvXCcVgQiUk5giOW3XcHYsMWx8GBq5KkP763XQ1bUzFOEdo5Y8CuDQmLL29HFEGKk7oZapOAL8x9+zB7chFzTIhq9OSX3ry7+VOCStykFYOWZ2PuG7sO0kiwatwWfpslpEjZXs/B1Chvd+5MfHlvmcq430Q4nI8bkd5MEvGaECLQ32pTVBWWxQ7Btaqr3KtLt1r6virUSnPNpAbMiLLOuscCacMJ4Q4d9D9Qfd0kdUnhl5RFY9X61Xidfzi1nhSyEuAUUwVox84nrWERQxMbQlqZd38NPQHgAhlfoN6XfVoH0LKAyhm4vLkJ8NTRmCjlEp2tOTilTpqpryglm0oR/0BXPwbx5YyKhm6+lS/m1ZGm9vjP0mZJkdOu4T0TnvJM4yOdjgK8DF8zsYRHPm90n3stj9sG9KMfj9+LSFTpc=
+  - secure: OBo5AnAGvfoqIRB19tO00CWOLUSs7LPUiHBAY/tSWhecxr8WVbnbI5tHy29PJ7UwEz+DvLUovu1gs0GRA2w2QL582thOgy9NUHvm/pDWsMxeDyUsQBtgNx4cG8AtRC5ikLOxBdKN1Q8TaJNmsvXrJZsq6RJ6fc4xjaA+GCxG/JcghJM7LZSur4loEgvQGTkZEGMAk2KhoKDi8jbgWPMQj2pwZLTHAqlDUV6NjUaQIGZSCI5bILIAZ5dmgUKOIzE+9X/HHbMk0vHn5Sm0uLlUQCjT3n5A/k6NNfjlq6DozhISj0chTaAvgZBPDxDAz/Mm2ceCYFN1ouuZE0LrzK/AqXKPnb0ie1QXvnEQRugmJ75BMT79lv9m0Z9gz3A+zRAqtq2mSVyjt/x0oYAOpvvqLR0j6/aqTBMcSGFGueaW4LAYq/rBS9we3EMpeyQMwZaBhu0u9wvisUcvMpmXPAohdlzbvQ21cMom7PqpCrmXDOauyuw8g3VIKRSSq2WIsUNEQNbZMNqhY8UxGFTvyaMFJs2+XO8bLDGjJB9z/ZlOO6v4rA1+/xzObnosN2zQf3RNXhfAEIcnodpP97FWOtqAAohBoENwJku96lyBGDOGDEl0iFiWeUBHEXaZXVDZAA84UteLZbVqVOQIEmLi41ZqlYaVE9a/Qph24TR7T19wiOs=
