@@ -79,7 +79,7 @@ Motion control
 ^^^^^^^^^^^^^^
 
 Mir:5 - High-resolution HFM
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mechanics
 ^^^^^^^^^
