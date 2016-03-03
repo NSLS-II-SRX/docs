@@ -4,5 +4,6 @@ Endstation
 .. toctree::
    :maxdepth: 2
 
-   kb_mirrors
+   optics/kb_mirrors
+   detectors/pixirad
 
